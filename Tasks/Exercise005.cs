@@ -27,8 +27,20 @@ namespace TechReturners.Tasks
     {
         public static List<string> Wave(string str)
         {
+
+        //String[] result = new String[]{};
+        List<string> result = new List<string>();
+        
+        for (int i = 0; i < str.Length; i++) 
+            if (str[i] != ' ') 
+            //console.log(string.slice(0,i), string.slice(i+1))
+            result.Add(str.Substring(0,i) + char.ToUpper(str[i])+ str.Substring(i+1));
+            
+            return result;
+
             throw new NotImplementedException();
         }
+    
     }
-}
 
+}

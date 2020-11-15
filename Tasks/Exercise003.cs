@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 // Scenario
 // Several people are standing in a row divided into two teams. The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
@@ -29,6 +30,23 @@ namespace TechReturners.Tasks
     {
         public static int[] RowWeights(int[] a)
         {
+            int sum1= 0;
+            int sum2 = 0;
+            int[] output = new int[2];
+            var teamOne = new List<int>{};
+            var teamTwo = new List<int>{};
+
+            for(int i=0,j=0; i<a.Length; i+=2 ,j++)
+                sum1 = sum1 + a[i];
+            
+            output[0] = sum1;
+
+            for(int i=1,j=0;i<a.Length; i+=2 ,j++)
+                sum2 = sum2 + a[i];
+            
+            output[1]= sum2;
+
+            return output;
             throw new NotImplementedException();
         }
     }

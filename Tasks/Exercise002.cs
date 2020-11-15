@@ -10,6 +10,12 @@ namespace TechReturners.Tasks
     {
         public static int Past(int h, int m, int s)
         {
+            int sumH = h*60*60*1000;
+            int sumM = m*60*1000;
+            int sumS = s*1000;
+
+        return sumH+sumM+sumS; 
+
             throw new NotImplementedException();
         }
     }
